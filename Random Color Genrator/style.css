@@ -35,8 +35,10 @@ body{
 
 .rgb-color-container{
     display: flex;
+    align-items: center;
+    justify-content: center;
     flex-direction: column;
-    gap: 10px;
+    gap: 8px;
     background-color: #444;
 }
 
@@ -55,5 +57,17 @@ body{
     font-size: 30px;
     font-weight: bold;
     text-shadow: 1px 1px 2px black;
+}
+
+.rgb-btn{
+    padding: 12px 20px;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: bold;
+    background-color: #222;
+    border: none;
+    border-radius: 12px;
+    width: 200px;
+    margin-top: 20px;
 }
 

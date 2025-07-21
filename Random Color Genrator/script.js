@@ -18,4 +18,9 @@ hexBtn.addEventListener("click", ()=> {
 
 
 
-//RGB Color btn
+//RGB Color generator
+const rgbBtn = document.querySelector('.rgb-btn');
+
+rgbBtn.addEventListener('click', ()=> {
+    
+})
