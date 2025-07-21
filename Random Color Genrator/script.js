@@ -12,4 +12,10 @@ hexBtn.addEventListener("click", ()=> {
         }   
       hexColorValue.textContent = `#${hexColorOutput}`;
       hexColorContainer.style.backgroundColor = `#${hexColorOutput}`;
+
+      hexBtn.style.color = `#${hexColorOutput}`;
 });
+
+
+
+//RGB Color btn
