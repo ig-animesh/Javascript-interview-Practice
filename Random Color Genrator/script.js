@@ -20,7 +20,19 @@ hexBtn.addEventListener("click", ()=> {
 
 //RGB Color generator
 const rgbBtn = document.querySelector('.rgb-btn');
+const getRedInputRange = document.querySelector('#red');
+const getBlueInputRange = document.querySelector('#blue');
+const getGreenInputRange = document.querySelector('#green');
+const rgbColorContainer = document.querySelector('.rgb-color-container');
 
-rgbBtn.addEventListener('click', ()=> {
+rgbBtn.addEventListener("click", ()=> {
+    let extractRedValue = getRedInputRange.value;
+    let extractGreenValue = getGreenInputRange.value;
+    let extractBlueValue = getBlueInputRange.value;
+
     
+
+    rgbColorContainer.style.backgroundColor = `rgb(${extractRedValue}, ${extractGreenValue}, ${extractBlueValue})`;
+
+    rgbBtn.style.color= `rgb(${extractRedValue}, ${extractGreenValue}, ${extractBlueValue})`;
 })
