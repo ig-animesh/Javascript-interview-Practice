@@ -24,6 +24,12 @@ const getRedInputRange = document.querySelector('#red');
 const getBlueInputRange = document.querySelector('#blue');
 const getGreenInputRange = document.querySelector('#green');
 const rgbColorContainer = document.querySelector('.rgb-color-container');
+const hexCopyBtn = document.querySelector('.hex-copy-color');
+const rgbCopyBtn = document.querySelector('.rgb-copy-color');
+const rgbColorValue = document.querySelector('.rgb-color-value');
+
+
+
 
 rgbBtn.addEventListener("click", ()=> {
     let extractRedValue = getRedInputRange.value;
@@ -31,8 +37,22 @@ rgbBtn.addEventListener("click", ()=> {
     let extractBlueValue = getBlueInputRange.value;
 
     
-
+    rgbColorValue.textContent = `rgb(${extractRedValue}, ${extractGreenValue}, ${extractBlueValue})`;
     rgbColorContainer.style.backgroundColor = `rgb(${extractRedValue}, ${extractGreenValue}, ${extractBlueValue})`;
 
     rgbBtn.style.color= `rgb(${extractRedValue}, ${extractGreenValue}, ${extractBlueValue})`;
-})
+});
+
+
+function copyHexColorToClipboard(){
+  navigator.clipboard.writeText(hexColorValue.textContent);
+  alert('Hex color copied to clipboard')
+}
+hexCopyBtn.addEventListener("click", copyHexColorToClipboard);
+
+
+function copyRgbColorToClipboard(){
+  navigator.clipboard.writeText(rgbColorValue.textContent);
+  alert('Rgb color copied to clipboard');
+}
+rgbCopyBtn.addEventListener('click', copyRgbColorToClipboard);

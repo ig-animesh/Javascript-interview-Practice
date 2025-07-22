@@ -33,6 +33,18 @@ body{
     border-radius: 12px;
 }
 
+.hex-copy-color{
+    padding: 12px 20px;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: bold;
+    background-color: #222;
+    border: none;
+    border-radius: 12px;
+}
+
+
+
 .rgb-color-container{
     display: flex;
     align-items: center;
@@ -74,4 +86,23 @@ label{
     width: 200px;
     margin-top: 20px;
 }
+
+.rgb-copy-color {
+    padding: 12px 20px;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: bold;
+    background-color: #222;
+    border: none;
+    border-radius: 12px;
+    margin-top: 15px;
+}
+
+.rgb-color-value{
+    font-size: 25px;
+    font-weight: bold;
+    text-shadow: 1px 1px 2px black;
+    margin-bottom: 18px;
+}
+
 
