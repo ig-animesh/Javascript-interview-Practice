@@ -50,6 +50,6 @@ h1{
 .fa-star::before{
     content: '\f005';
     color: yellow;
-    font-size: 50px;
+    font-size: 30px;
 }
 

@@ -1,16 +1,16 @@
 //error on hover
 
-const stars = document.querySelectorAll(".fa fa-star-o");
+const stars = document.querySelectorAll(".fa-star-o");
 const selectedRatingValueText = document.querySelector('.selected-rating-value');
 
 let currentTotalSelectedStars = -1;
 
 stars.forEach((starItem, index)=>{
     starItem.dataset.rating = index + 1;
-    starItem.addEventListener("mouseover", handleMouseOver);
-    starItem.addEventListener("click", handleOnClick);
-    starItem.addEventListener("mouseleave", handleMouseLeave);
-});
+    starItem.addEventListener('mouseover', handleMouseOver);
+    starItem.addEventListener('click', handleOnClick);
+    starItem.addEventListener('mouseleave', handleMouseLeave);
+})
 
 function handleMouseOver(event){
     console.log(event.target.dataset);
@@ -18,7 +18,8 @@ function handleMouseOver(event){
 
 function handleMouseOver(event){
     const currentRatingValue = event.target.dataset.rating;
-    if(!currentRatingValue) return
+    if(!currentRatingValue) return;
+
     else handleUpdateRatingState(currentRatingValue);
 }
 
@@ -35,9 +36,12 @@ function handleUpdateRatingState(getCurrentRatingValue){
 }
 
 function handleOnClick(event){
-    
+    const currentRatingValue = event.target.dataset.rating;
+    currentTotalSelectedStars = currentRatingValue;
+    handleUpdateRatingState(currentTotalSelectedStars);
+    selectedRatingValueText.textContent = currentTotalSelectedStars;
 }
 
-function handleMouseLeave(event){
-
+function handleMouseLeave(){
+    handleUpdateRatingState(currentTotalSelectedStars);
 }
