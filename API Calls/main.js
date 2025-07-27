@@ -19,6 +19,16 @@ function fetchUsingXHR(){
  }
 }
 
+//Fetch using fetch
+
+function fetchUsingFetchMethod(){
+    const fetchRequest = fetch('https://jsonplaceholder.typicode.com/posts', {method: 'GET',
+        
+    });
+
+    fetchRequest.then(response => response.json()).then(result => dislayResults(result)).catch((e) => console.log(e))
+}
+
 
  function dislayResults(posts){
     postListContainer.innerHTML = posts.map(postItem=> `
@@ -28,5 +38,7 @@ function fetchUsingXHR(){
         </div>
         `).join(" ");
  }
-fetchUsingXHR();
+// fetchUsingXHR();
+fetchUsingFetchMethod();
+
 
