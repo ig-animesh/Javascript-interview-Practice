@@ -30,6 +30,18 @@ function fetchUsingFetchMethod(){
 }
 
 
+ async function fetchUsingAsyncAwaitMethod(){
+    const response = await fetch("https://jsonplaceholder.typicode.com/posts", {method: 'GET',
+        
+    });
+
+    const result = await response.json();
+    dislayResults(result);
+    
+    console.log(result)
+}
+
+
  function dislayResults(posts){
     postListContainer.innerHTML = posts.map(postItem=> `
         <div class = "post-item">
@@ -39,6 +51,6 @@ function fetchUsingFetchMethod(){
         `).join(" ");
  }
 // fetchUsingXHR();
-fetchUsingFetchMethod();
+//fetchUsingFetchMethod();
 
-
+fetchUsingAsyncAwaitMethod();
