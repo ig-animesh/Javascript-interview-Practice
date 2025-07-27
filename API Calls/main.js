@@ -41,6 +41,34 @@ function fetchUsingFetchMethod(){
     console.log(result)
 }
 
+function helperMethod(method, url){
+    const promise = new Promise((resolve, reject)=> {
+        const xhr = new XMLHttpRequest();
+        xhr.open(method, url);
+        xhr.responseType = 'json';
+        xhr.send();
+
+        xhr.onload = ()=>{
+            if(xhr.status === 200){
+                resolve(xhr.response)
+            } else{
+                reject(xhr.response)
+            }
+        }
+    })
+
+    return promise;
+}
+
+
+async function fetchUsingXHRAsyncAwait(){
+
+    const response = await helperMethod('GET', 'https://jsonplaceholder.typicode.com/posts')
+    dislayResults(response);
+
+    console.log(response)
+
+}
 
  function dislayResults(posts){
     postListContainer.innerHTML = posts.map(postItem=> `
@@ -52,5 +80,6 @@ function fetchUsingFetchMethod(){
  }
 // fetchUsingXHR();
 //fetchUsingFetchMethod();
+//fetchUsingAsyncAwaitMethod();
 
-fetchUsingAsyncAwaitMethod();
+fetchUsingXHRAsyncAwait();
