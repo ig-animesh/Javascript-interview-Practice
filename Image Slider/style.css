@@ -19,7 +19,7 @@ html{
 h1{
     text-align: center;
     margin: 20px;
-    font-size: 6rem;
+    font-size: 5rem;
 }
 
 .slider{
@@ -50,19 +50,36 @@ h1{
 .bottom-container{
     display: flex;
     justify-content: space-between;
-    padding: 0px 20px;
-    margin-top: -200px;
+    padding: 0px 30px; 
+    margin-top: 10px;
 }
 
 .bottom-container button{
-    padding: 10px 30px;
+    padding: 10px 20px;
     background-color: #888;
     border: none;
     border-radius: 20px;
+    cursor: pointer;
     
 }
 
 .bottom-container button i{
     color: #111;
     font-size: 20px;
+}
+
+.dots-container{
+    display: flex;
+    gap: 14px;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.dots-container .dot{
+    width: 30px;
+    height: 20px;
+    border-radius: 8px;
+    background-color: #d3d3d3;
+    cursor: pointer;
 }

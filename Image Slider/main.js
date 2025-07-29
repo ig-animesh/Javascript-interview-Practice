@@ -29,10 +29,9 @@ function displayImages(getImagesList){
         `).join(" ");
 
         dotsContainer.innerHTML = getImagesList.map(item, index=> `
-        <span class = "dot" data-slide= ${index}></span>
+        <span class= "dot"  data-slide= ${index}></span>
         `).join(" ");
 }
-
 
 
 
